@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap');
+
+@import "tailwindcss";
+
+@theme {
+    --color-primary: #B9FF66;
+    --color-secondary: #191A23;
+    --color-tertiary: #F3F3F3;
+    --font-space-grotesk: "Space Grotesk", sans-serif;
+}
+
+/* Shared base typography */
+@utility text-typography {
+    font-weight: 500;
+    font-family: var(--font-space-grotesk), sans-serif;
+    line-height: normal;
+    letter-spacing: 0;
+}
+
+@utility text-regular {
+    font-size: 20px;
+    font-weight: normal;
+    font-family: var(--font-space-grotesk), sans-serif;
+    line-height: 28px;
+    letter-spacing: 0;
+}
+
+/* Individual sizes for desktop */
+@utility text-h1 {
+    @apply text-typography;
+    font-size: 60px;
+}
+
+@utility text-h2 {
+    @apply text-typography;
+    font-size: 40px;
+}
+
+@utility text-h3 {
+    @apply text-typography;
+    font-size: 30px;
+}
+
+@utility text-h4 {
+    @apply text-typography;
+    font-size: 20px;
+}
+
+@utility text-base {
+    @apply text-typography;
+    font-size: 18px;
+}
+
+/* Individual sizes for mobile */
+@utility text-h1-mob {
+    @apply text-typography;
+    font-size: 43px;
+}
+
+@utility text-h2-mob {
+    @apply text-typography;
+    font-size: 36px;
+}
+
+@utility text-h3-mob {
+    @apply text-typography;
+    font-size: 26px;
+}
+
+@utility text-h4-mob {
+    @apply text-typography;
+    font-size: 18px;
+}
+
+@utility text-base-mob {
+    @apply text-typography;
+    font-size: 16px;
+}
