@@ -1,11 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap');
 
 @import "tailwindcss";
+@import 'tailwind-scrollbar-hide/v4';
+
+html {
+    scroll-behavior: smooth;
+}
 
 @theme {
     --color-primary: #B9FF66;
-    --color-secondary: #191A23;
-    --color-tertiary: #F3F3F3;
+    --color-dark: #191A23;
+    --color-gray: #F3F3F3;
+    --color-gray-dark: #898989;
     --font-space-grotesk: "Space Grotesk", sans-serif;
 }
 
@@ -48,6 +54,7 @@
 
 @utility text-base {
     @apply text-typography;
+    font-weight: 400;
     font-size: 18px;
 }
 
@@ -76,3 +83,16 @@
     @apply text-typography;
     font-size: 16px;
 }
+
+@utility shadow-base {
+    @apply shadow-[0_5px_0_0_#191A23];
+}
+
+@utility clover-clip-path {
+    clip-path: path('M87.8068 48.9117C120.649 86.3213 90.3213 116.649 52.9117 83.8068C15.5021 116.649 -14.8258 86.3213 18.0166 48.9117C-14.8258 11.5021 15.5021 -18.8258 52.9117 14.0166C90.3213 -18.8258 120.649 11.5021 87.8068 48.9117Z');
+}
+
+@utility chat-clip {
+    clip-path: polygon(0% 0%, 50% 50%, 100% 0%);
+}
+

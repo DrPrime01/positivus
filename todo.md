@@ -1,7 +1,7 @@
 # Positivus App To-do
 
 ## Pages
-- Home page
+- Home page ✅
 - About page
 - Use cases page
 - Pricing page
@@ -10,7 +10,9 @@
 
 ## Components
 - Navbar
-  - Navbar desktop ✅
-  - Navbar mobile
+  - Desktop ✅
+  - Mobile
 - Footer
+  - Desktop ✅
+  - Mobile
 
