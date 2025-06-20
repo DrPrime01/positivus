@@ -82,6 +82,7 @@ html {
 @utility text-base-mob {
     @apply text-typography;
     font-size: 16px;
+    font-weight: 400;
 }
 
 @utility shadow-base {
@@ -95,4 +96,64 @@ html {
 @utility chat-clip {
     clip-path: polygon(0% 0%, 50% 50%, 100% 0%);
 }
+
+@media screen and (max-width: 720px) {
+.hover-effect {
+    position: relative;
+    overflow: hidden;
+    z-index: 0;
+}
+
+/* Pseudo-element for animated background */
+.hover-effect::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: var(--color-primary);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.5s ease;
+    z-index: -1; /* So text stays above */
+}
+
+.hover-effect:hover::before {
+    transform: scaleX(1);
+}
+}
+
+.button-hover-bg {
+    position: relative;
+    overflow: hidden;
+    z-index: 0;
+    border-radius: 9999px; /* Full rounding, matches .rounded-full */
+    transition: background-color 0.3s ease;
+}
+
+.button-hover-bg::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-color: var(--color-dark); /* or use a Tailwind utility bg */
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.5s ease;
+    border-radius: 9999px;
+    z-index: -1;
+}
+
+.button-hover-bg:hover::before {
+    transform: scaleX(1);
+}
+
+.arrow-btn {
+    clip-path: circle(20px at 20px center);
+    transition: clip-path 0.5s ease, padding 0.5s ease;
+}
+
+.arrow-btn:hover {
+    clip-path: circle(150% at left center);
+    padding-right: 12px;
+}
+
+
 

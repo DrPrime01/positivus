@@ -48,16 +48,18 @@ export default function Testimonials() {
   }, []);
 
   return (
-    <div className="mx-auto container mb-[140px] flex flex-col gap-y-20">
-      <div className="flex items-center gap-x-10">
-        <h2 className="text-h2 p-1.5 rounded-sm bg-primary">Testimonials</h2>
-        <p className="text-base max-w-[473px]">
+    <div className="mx-auto container max-lg:px-6 mb-[140px] flex flex-col gap-y-20">
+      <div className="flex flex-col gap-y-6 max-md:justify-center md:flex-row items-center gap-x-4 lg:gap-x-10">
+        <h2 className="text-h2-mob md:text-h2 p-1.5 rounded-sm max-lg:bg-primary hover-effect cursor-pointer">
+          Testimonials
+        </h2>
+        <p className="text-base-mob md:text-base lg:text-balance lg:max-w-[580px] max-md:text-center">
           Hear from Our Satisfied Clients: Read Our Testimonials to Learn More about Our Digital
           Marketing Services
         </p>
       </div>
 
-      <div className="flex flex-col gap-y-[124px] bg-dark rounded-[45px] pt-[84px] pb-[68px] px-[50px]">
+      <div className="flex flex-col gap-y-20 md:gap-y-[124px] bg-dark rounded-[45px] pt-10 pb-8 px-6 md:pt-[84px] md:pb-[68px] md:px-[50px]">
         <div
           ref={carouselRef}
           className="flex items-center gap-x-[50px] overflow-x-auto scroll-smooth w-full scrollbar-hide"
@@ -68,7 +70,7 @@ export default function Testimonials() {
               // eslint-disable-next-line react-x/no-array-index-key
               <div key={index} className="carousel-item flex flex-col shrink-0 w-[606px]">
                 <div>
-                  <div className="border border-primary py-12 px-[52px] rounded-4xl max-h-[238px]">
+                  <div className="border border-primary py-5 px-7 md:py-12 md:px-[52px] rounded-4xl max-h-[238px]">
                     <p className="text-white text-base">
                       "We have been working with Positivus for the past year and have seen a
                       significant increase in website traffic and leads as a result of their

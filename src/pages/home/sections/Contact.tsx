@@ -1,14 +1,16 @@
 export default function Contact() {
   return (
-    <div className="mx-auto container mb-[140px] flex flex-col gap-y-20">
-      <div className="flex items-center gap-x-10">
-        <h2 className="text-h2 p-1.5 rounded-sm bg-primary">Contact Us</h2>
-        <p className="text-base max-w-[323px]">
+    <div className="mx-auto container max-lg:px-6 mb-[140px] flex flex-col gap-y-20">
+      <div className="flex flex-col gap-y-6 max-md:justify-center md:flex-row items-center gap-x-10">
+        <h2 className="text-h2-mob md:text-h2 p-1.5 rounded-sm max-sm:bg-primary hover-effect cursor-pointer">
+          Contact Us
+        </h2>
+        <p className="text-base-mob md:text-base md:text-balance max-w-[580px] max-md:text-center">
           Connect with Us: Let's Discuss Your Digital Marketing Needs
         </p>
       </div>
 
-      <div className="flex pl-[100px] pt-[60px] pb-20 rounded-[45px] bg-gray justify-between overflow-hidden">
+      <div className="flex p-8 md:pl-[100px] md:pt-[60px] pb-20 rounded-[45px] bg-gray justify-between overflow-hidden">
         <div className="max-w-[556px] w-full flex flex-col gap-y-10">
           <div className="flex items-center gap-x-9">
             <div className="flex items-center gap-x-3.5">
@@ -72,13 +74,13 @@ export default function Contact() {
           <div>
             <button
               type="submit"
-              className="w-full bg-dark px-[35px] py-5 rounded-[14px] text-white cursor-pointer text-base"
+              className="w-full bg-dark px-[35px] py-5 rounded-[14px] text-white cursor-pointer text-base hover:text-primary transition-colors duration-300"
             >
               Send Message
             </button>
           </div>
         </div>
-        <div className="relative w-full">
+        <div className="relative w-full hidden lg:block">
           <img
             src="/assets/images/contact-form-illustration.png"
             alt="illustration"

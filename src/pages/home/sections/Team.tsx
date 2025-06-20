@@ -4,15 +4,17 @@ import { Link } from 'react-router';
 
 export default function Team() {
   return (
-    <div className="flex flex-col gap-y-20 mb-[140px] mx-auto container">
+    <div className="flex flex-col gap-y-20 mb-[140px] mx-auto container max-lg:px-6">
       <div className="flex items-center gap-x-10">
-        <h2 className="text-h2 p-1.5 rounded-sm bg-primary">Team</h2>
-        <p className="text-base text-wrap max-w-[473px]">
+        <h2 className="text-h2-mob md:text-h2 p-1.5 rounded-sm max-sm:bg-primary hover-effect cursor-pointer">
+          Team
+        </h2>
+        <p className="text-base-mob md:text-base text-wrap max-w-[473px]">
           Meet the skilled and experienced team behind our successful digital marketing strategies
         </p>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
         {teamData.map((team) => (
           <div
             key={team.title}
@@ -27,8 +29,8 @@ export default function Team() {
                 />
               </div>
               <div className="flex flex-col">
-                <span className="text-h4">{team.name}</span>
-                <span className="text-regular">{team.title}</span>
+                <span className="text-h4-mob md:text-h4">{team.name}</span>
+                <span className="text-[1rem] md:text-regular">{team.title}</span>
               </div>
               <LinkedInIcon className="absolute top-0 right-0" />
             </div>
@@ -40,7 +42,7 @@ export default function Team() {
       <div className="self-end -mt-10">
         <Link
           to="/about-us"
-          className="px-[35px] py-5 bg-dark rounded-[14px] text-regular text-white hover:text-primary cursor-pointer block w-[269px] text-center"
+          className="px-[35px] py-5 bg-dark rounded-[14px] text-[1rem] md:text-regular text-white hover:text-primary cursor-pointer block w-[269px] text-center"
         >
           See all team
         </Link>
